@@ -1,13 +1,13 @@
 %define name libsbml
-%define version 2.3.4
-%define rel	2
+%define version 3.0.0
+%define rel	1
 %define release %mkrel %{rel}
 
 Summary:	Systems Biology Markup Language (SBML) library
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
-Source:         http://prdownloads.sourceforge.net/sbml/%{name}-%{version}.tar.bz2
+Source:         http://prdownloads.sourceforge.net/sbml/%{name}-%{version}-prerelease-src.tar.bz2
 Patch:		%{name}-%{version}-gcc4.patch
 License:	LGPL
 Group:		System/Libraries
@@ -65,7 +65,7 @@ This package contains the developer's documentation
 
 %setup -q
 
-%patch -p1
+#%patch -p1
 
 %build
 

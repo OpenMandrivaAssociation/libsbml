@@ -8,7 +8,6 @@ Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Source:         http://prdownloads.sourceforge.net/sbml/%{name}-%{version}-prerelease-src.tar.bz2
-Patch:		%{name}-%{version}-gcc4.patch
 License:	LGPL
 Group:		System/Libraries
 Url:		http://sbml.org/libsbml.html
@@ -64,8 +63,6 @@ This package contains the developer's documentation
 %prep
 
 %setup -q
-
-#%patch -p1
 
 %build
 

@@ -59,27 +59,19 @@ Requires:       %{name} = %{version}-%{release}
 This package contains the developer's documentation
 
 
-
 %prep
 
 %setup -q
 
 %build
 
-#do not use percent/configure it messes up the compilation
-export CFLAGS="$RPM_OPT_FLAGS"
-export CXXFLAGS="$RPM_OPT_FLAGS"
-export CPPFLAGS="$RPM_OPT_FLAGS"
-export FFLAGS="$RPM_OPT_FLAGS"
-./configure i586-mandrake-linux-gnu --prefix=%_prefix --with-xerces --with-swig --with-python #--with-perl #--libdir=%_libdir
-
-#-j1 necessary because of a race problem where the python binding
-#would be compiled before libsbml.so
+%configure2_5x --with-xerces \
+	--with-swig --with-python
 %make -j1
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%makeinstall
+%makeinstall_std
 
 %clean
 rm -rf $RPM_BUILD_ROOT

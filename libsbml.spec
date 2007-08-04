@@ -8,6 +8,7 @@ Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Source:         http://prdownloads.sourceforge.net/sbml/%{name}-%{version}-prerelease-src.tar.bz2
+Patch0:		libsbml-3.0.0-fix-python-install-path.patch
 License:	LGPL
 Group:		System/Libraries
 Url:		http://sbml.org/libsbml.html
@@ -62,6 +63,7 @@ This package contains the developer's documentation
 %prep
 
 %setup -q
+%patch0 -p0 -b .python-install
 
 %build
 
@@ -82,7 +84,7 @@ rm -rf $RPM_BUILD_ROOT
 %files -n %{name}
 %defattr(-,root,root)
 %{_libdir}/*.so
-%{_libdir}/python%{pyver}/site-packages/*
+%py_platsitedir/*
 
 %files -n %{name}-devel
 %defattr(-,root,root)

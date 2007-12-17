@@ -12,7 +12,6 @@ Patch0:		libsbml-3.0.0-fix-python-install-path.patch
 License:	LGPL
 Group:		System/Libraries
 Url:		http://sbml.org/libsbml.html
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 Requires:	swig python
 BuildRequires:  xerces-c-devel python-devel tetex-latex tetex-dvips
 %description

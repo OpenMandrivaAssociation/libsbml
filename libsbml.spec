@@ -1,5 +1,5 @@
 %define name libsbml
-%define version 3.0.0
+%define version 3.2.0
 %define rel	1
 %define release %mkrel %{rel}
 
@@ -7,8 +7,7 @@ Summary:	Systems Biology Markup Language (SBML) library
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
-Source:         http://prdownloads.sourceforge.net/sbml/%{name}-%{version}-prerelease-src.tar.bz2
-Patch0:		libsbml-3.0.0-fix-python-install-path.patch
+Source:         http://prdownloads.sourceforge.net/sbml/%{name}-%{version}-src.tar.bz2
 License:	LGPL
 Group:		System/Libraries
 Url:		http://sbml.org/libsbml.html
@@ -63,7 +62,6 @@ This package contains the developer's documentation
 %prep
 
 %setup -q
-%patch0 -p0 -b .python-install
 
 %build
 
@@ -99,6 +97,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %doc COPYING.txt
 %{_libdir}/*.a
+%{_libdir}/pkgconfig/libsbml.pc
 
 %files doc
 %defattr(-,root,root)

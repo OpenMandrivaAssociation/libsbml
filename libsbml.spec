@@ -65,8 +65,7 @@ This package contains the developer's documentation
 
 %build
 
-%configure2_5x --with-xerces \
-	--with-swig --with-python
+%configure --with-xerces --with-swig --with-python
 %make -j1
 
 %install

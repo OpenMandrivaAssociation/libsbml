@@ -13,7 +13,7 @@ Group:		System/Libraries
 Url:		http://sbml.org/libsbml.html
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 Requires:	swig python
-BuildRequires:  xerces-c-devel python-devel tetex-latex tetex-dvips
+BuildRequires:  xerces-c-devel python-devel tetex-latex tetex-dvips zlib
 %description
 The Systems Biology Markup Language (SBML) is a computer-readable format for 
 representing models of biochemical reaction networks. SBML is applicable 

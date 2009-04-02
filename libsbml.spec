@@ -1,6 +1,6 @@
 %define name libsbml
-%define version 3.2.0
-%define rel	2
+%define version 3.3.2
+%define rel	1
 %define release %mkrel %{rel}
 
 Summary:	Systems Biology Markup Language (SBML) library

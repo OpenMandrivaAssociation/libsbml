@@ -1,7 +1,7 @@
 Summary:	Systems Biology Markup Language (SBML) library
 Name:		libsbml
 Version:	3.4.1
-Release:	3
+Release:	4
 Source:         http://prdownloads.sourceforge.net/sbml/%{name}-%{version}-src.tar.bz2
 License:	LGPL
 Group:		System/Libraries

@@ -5,7 +5,7 @@ Release:	4
 Source:         http://prdownloads.sourceforge.net/sbml/%{name}-%{version}-src.tar.bz2
 License:	LGPL
 Group:		System/Libraries
-Url:		http://sbml.org/libsbml.html
+Url:		https://sbml.org/libsbml.html
 Requires:	swig python
 BuildRequires:  swig xerces-c-devel python-devel tetex-latex tetex-dvips zlib-devel bzip2-devel
 

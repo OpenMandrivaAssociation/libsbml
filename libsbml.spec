@@ -7,6 +7,11 @@ License:	LGPL
 Group:		System/Libraries
 Url:		https://sbml.org/libsbml.html
 Requires:	swig python
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:  swig xerces-c-devel python-devel tetex-latex tetex-dvips zlib-devel bzip2-devel
 
 %description
